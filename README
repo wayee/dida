@@ -1,8 +1,10 @@
-YiMVC is an lightweight MVC Framework for actionscript 3.0.
+YiMVC is a lightweight MVC Framework for actionscript 3.0.
 
 I like to make everything simple and easy, so YiMVC has been here.
 
-框架以消息(Notificatioin)为沟通的方式，消息发送都通过facade的sendNotification方法
-Model和Service都需要继承Actor，Actor也继承自Notifier
-只有Controller才有接受消息的能力，但是需要通过Facade.registerController注册后才具备
+框架以消息(Notificatioin)为沟通的方式，消息发送都通过facade的sendNotification方法。
 
+Model和Service都需要继承Actor，Actor也继承自Notifier，当然Controller也继承了Notifier，
+所以Model、Service和Controller都具有发送消息的能力。
+
+但是只有Controller才有接受消息的能力，前提是需要通过Facade.registerController注册后才具备。
