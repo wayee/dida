@@ -1,10 +1,9 @@
-YiMVC is a lightweight MVC Framework for actionscript 3.0.
+Dida is built on the traditional Model-View-Controller-Service pattern. the Model only contains data and business logic; the Service interact with Server-Side to get the data or only send request and save data to the Model; the View presents the user interface components; and the Controller handles the user input and manipulates the model and service.
 
-I like to make everything simple and easy, so YiMVC has been here.
+The Model - provides a means to access and manipulate application data. It extends the Actor Class to provide controlled access to a data object.
 
-框架以消息(Notificatioin)为沟通的方式，消息发送都通过facade的sendNotification方法。
+The Service - provides a means to interact with Server-Side. It also extends the Actor Class to provide send request to Server-Side and manipulate model to update data.
 
-Model和Service都需要继承Actor，Actor也继承自Notifier，当然Controller也继承了Notifier，
-所以Model、Service和Controller都具有发送消息的能力。
+The View - provides a means by which the user interface elements are presented and updated.
 
-但是只有Controller才有接受消息的能力，前提是需要通过Facade.registerController注册后才具备。
+The Controller - represents a means by which UI elements can manipulate the model and serivce. Controllers are specific implementations that determine how the application responds to user input. For example, controllers can do validation checks on user input and decide if application data needs to be updated.
